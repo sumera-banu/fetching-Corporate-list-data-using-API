@@ -1,0 +1,309 @@
+/* /* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+   text-align: center;
+ */
+
+ *, html {
+  margin: 0;
+  padding: 0 ;
+  box-sizing: border-box;
+ }
+
+ 
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(@fontsource/poppins/files/poppins-latin-400-normal.woff2) format('woff2'), url(@fontsource/poppins/files/poppins-latin-400-normal.woff) format('woff');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+ /* body {  
+background: #d4639c; 
+background: linear-gradient(to top right, #fc2c77 0%, #6c4079 100%);
+min-height: 100vh;
+padding: 80px 100px;
+font-family:  'Poppins', sans-serif !important;
+
+color:gray
+ }  */
+
+ .form{
+  margin: 50px auto;
+  /* margin-top: 7%; */
+  max-height: 68%;
+  border-radius: 10px;
+  padding: 57px 65px;
+  padding-bottom: 65px;
+  background-color:rgb(255, 255, 255);
+  /* height: 50%; */
+  width: 680px;
+  /* height: 700px; */
+  /* box-shadow: 5px 10px 20px 5px Green inset; */
+
+  }
+
+  .form>p{
+    font-size: 24px;
+    font-weight:500;
+    color: #525252;
+    margin:0px 0px 40px 0px;
+    text-align: left;
+  }
+
+  .page{
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .resultpage{
+    padding: 20px 0;
+  }
+
+  .resultpage p{
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    color:#333;
+
+  }
+ 
+ /* p{
+  font-size: 25px;
+  color: rgb(54, 54, 54);
+  font-family: Arial, Helvetica, sans-serifS;
+ } */
+
+ label{
+  color: #555;
+  font-size: 16px;
+ }
+
+ .row1,.row2,.row3{
+  display: flex;
+  gap:30px;
+  margin-bottom: 0;
+ }
+
+ .row1 .field, .row2 .field, .row3 .field{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex:1;
+ }
+
+ .row4{
+  margin-bottom: 0;
+ }
+
+
+
+ .field{
+  margin: 0 0 22px 0;
+ }
+
+ .field label{
+  display: block;
+  font-size: 16px;
+  color:#555;
+  margin-bottom:5px;
+  font-weight:400 ;
+ }
+
+.text-input{
+  line-height: 50px;
+  width:100%;
+  padding: 0 20px;
+  font-size: 15px;
+  border-radius: 6px; 
+  border: none;
+  transition: all 0.4s ease;
+  background: #fafafa;
+  color: #333;
+  font-family:Poppins,sans-serif !important;
+  box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+}
+
+
+/* .fa-regular fa-calendar date-icon {
+  position: relative;
+  width: 100%;
+} */
+
+.date-input{
+  line-height: 50px;
+  width:100%;
+  padding: 0 40px 0 20px;
+  font-size: 15px;
+  border-radius: 6px;
+  border:none;
+  background: #fafafa;
+  color: #333;
+  font-family:Poppins,sans-serif !important;
+  box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+}
+
+.date-icon{
+  position: absolute;
+  right: 15px;
+  top: 30px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+
+/*
+Source - https://stackoverflow.com/a
+Posted by nlfonseca
+Retrieved 2026-01-28, License - CC BY-SA 4.0
+*/
+
+/* input[type=date]::-webkit-datetime-edit {
+    display: none;
+} */
+
+.select-input{
+  /* line-height: 50px; */
+  width:100%;
+  padding: 14px 16px;
+  font-size: 16px;
+  border-radius: 6px;
+  border:none;
+  background: #fafafa;
+  color: #555;
+  font-family:Poppins,sans-serif;
+  cursor:pointer;
+  box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+}
+
+/* .select-input label{
+  padding-left: 22px;
+    padding-right: 50px;
+} */
+
+.radio-label{
+  display: block;
+  font-size: 16px;
+  color:#555;
+  margin-bottom:5px;
+  font-weight:400 ;
+}
+
+.radio-field{
+  display: flex;
+  gap: 30px;
+  margin-top:0;
+  align-items: center;
+  min-height: 50px; 
+}
+
+.radio-field label{
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #333;
+  margin: 0;
+}
+
+.radio-field input[type="radio"]{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #e5e5e5;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked{
+  background-color: #57b846;
+}
+
+.error-input {
+  border: 1px solid #e74c3c;
+  background-color: #fff5f5;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top:4px;
+}
+
+p{
+  margin-left: 35px;
+  margin-top: 30px;
+}
+
+button{
+  border: none;
+  border-radius: 5px;
+  width: 30%;
+  padding: 11px 35px;
+  background-color: #4272d7;
+  color:white;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  box-shadow: 0 4px 12px rgba(74,144,226,0.3);
+  align-items: center;
+  align-content: center;
+  margin: 14px 0 0 0;
+  font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+}
+
+.back-button{
+  border: none;
+  border-radius: 5px;
+  width: 30%;
+  padding: 11px 35px;
+  background-color: #4272d7;
+  color:white;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  box-shadow: 0 4px 12px rgba(74,144,226,0.3);
+  align-items: center;
+  align-content: center;
+  margin: 20px 0 0 0;
+  font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+} 
+
+.my-table, .my-table th, .my-table td{
+  border:1px solid black;
+
+}
+
+h2{
+  margin: auto;
+}
+
+table {
+  border-collapse: collapse; 
+  width: 90%; 
+  margin: auto;
+  margin-top: 20px;
+  box-shadow: inset;
+}
+
+th, td {
+  border: 1px solid #ddd; 
+  padding: 8px; 
+  text-align: left; 
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Light gray background for even rows */
+}
+
+tbody tr:hover{
+  background-color: #ddd;
+}
